@@ -1,20 +1,20 @@
 import smtplib  # used for sending emails
 import ssl
 
-host = "smtp.gmail.com"  # standard gmail smtp host
-port - 465
 
-username = ""  # enter my app email
-password = ""  # app password, not secure, recommended to use environment variables
+def send_email(message):
+    host = "smtp.gmail.com"  # standard gmail smtp host
+    port - 465
 
-receiver = ""  # same as username or whatever # we want
-context = ssl.create_default_context()
+    username = ""  # enter my app email
+    password = ""  # app password, not secure, recommended to use environment variables
 
-message = """\
-Subject: Hi
-Hello, test message
-"""
+    receiver = ""  # same as username or whatever # we want
+    context = ssl.create_default_context()
 
-with smtplib.SMTP_SSL(host, port, context=context) as server:
-    server.login(username, password)
-    server.sendmail(username, receiver, message)
+    with smtplib.SMTP_SSL(host, port, context=context) as server:
+        server.login(username, password)
+        server.sendmail(username, receiver, message)
+
+
+send_email()
