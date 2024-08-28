@@ -1,13 +1,18 @@
 import smtplib  # used for sending emails
 import ssl
 
+# to store a password securely, import your relative os library to get env variable
+# in terminal, run this: touch ~/.zshrc; open ~/.zshrc
+# create local env variables in this, give actual pw to gmail account
+# secures password to our mac, other people could see our password if we have it right here
+import os
 
 def send_email(message):
     host = "smtp.gmail.com"  # standard gmail smtp host
     port - 465
 
     username = ""  # enter my app email
-    password = ""  # app password, not secure, recommended to use environment variables
+    password = os.getenv("PASSWORD")
 
     receiver = ""  # same as username or whatever # we want
     context = ssl.create_default_context()

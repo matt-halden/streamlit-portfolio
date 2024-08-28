@@ -1,3 +1,6 @@
-# What is this project?
-This is a web app to showcase Python projects
-### Web developments by Matt Halden
+# Streamlit Portfolio
+This is a simple web app that created a porfolio template from streamlit, built during a Udemy course.
+
+Leverages streamlit, pandas, ssl, smtplib
+
+Skills: web development, email sending
